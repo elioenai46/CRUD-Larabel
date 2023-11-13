@@ -151,6 +151,9 @@
                     <h1>Peso</h1>
                 </th>
                 <th>
+                    <h1>Precio</h1>
+                </th>
+                <th>
                     <h1>Actualizar</h1>
                 </th>
                 <th>
@@ -168,8 +171,14 @@
                     <td>{{ $camara->tipo_de_lente }}</td>
                     <td>{{ $camara->resolucion }}</td>
                     <td>{{ $camara->peso }}</td>
-                    <td><button><i class="fas fa-trash-alt"></i></button></td>
+                    <td>{{ $camara->precio }}</td>
                     <td><button><i class="fas fa-pen-square"></i></button></td>
+                    <td> <!-- Formulario para eliminar -->
+                        <form action="{{ route('camaras-destroy', ['id' => $camara->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                        </form></td>
                 </tr>
             @endforeach
         </tbody>

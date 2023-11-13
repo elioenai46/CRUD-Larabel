@@ -43,6 +43,12 @@ class CamaraController extends Controller
     {
         $camaras = Camara::all(); // Recupera todos los registros de la tabla "camaras"
 
-        return view('camaras.index', ['camaras'=>$camaras]);
+        return view('camaras.index', ['camaras' => $camaras]);
+    }
+
+    public function destroy($id){
+        $camara = camara::find($id);
+        $camara->delete();
+        return redirect()->route('camaras')->with('success','Camara eliminada');
     }
 }

@@ -25,3 +25,5 @@ Route::get('/insert', function(){
 Route::post('/insert',[CamaraController::class,'store'])->name('actividades');
 //Consultar
 Route::get('/view',[CamaraController::class,'index'])->name('camaras');
+//Eliminar
+Route::delete('/view/{id}', [CamaraController::class, 'destroy'])->name('camaras-destroy');
