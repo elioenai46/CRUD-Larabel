@@ -38,4 +38,11 @@ class CamaraController extends Controller
         // Redirigir con un mensaje de éxito
         return redirect()->route('actividades')->with('success', 'camara Registrada');
     }
+
+    public function index()
+    {
+        $camaras = Camara::all(); // Recupera todos los registros de la tabla "camaras"
+
+        return view('camaras.index', ['camaras'=>$camaras]);
+    }
 }

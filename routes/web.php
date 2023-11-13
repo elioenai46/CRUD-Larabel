@@ -21,5 +21,7 @@ Route::get('/', function () {
 Route::get('/insert', function(){
     return view('actividades.index');
 });
-
+//Insertar
 Route::post('/insert',[CamaraController::class,'store'])->name('actividades');
+//Consultar
+Route::get('/view',[CamaraController::class,'index'])->name('camaras');
