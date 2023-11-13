@@ -110,6 +110,9 @@
             box-shadow: 0 6px 6px -6px #0E1119;
         }
 
+        a{
+            font-size: 20px;
+        }
         
 
         @media (max-width: 800px) {
@@ -173,13 +176,13 @@
                     <td>{{ $camara->precio }}</td>
                     <td>
                         <!-- Botón para actualizar -->
-                        <a href="{{ route('camaras-update', ['id' => $camara->id]) }}"><button><i class="fas fa-pen-square"></i></button></a>
+                        <a href="{{ route('camaras-update', ['id' => $camara->id]) }}"><button><i style="color: #4a97ba" class="fas fa-pen-square"></i></button></a>
                     </td>
                     <td> <!-- Formulario para eliminar -->
                         <form action="{{ route('camaras-destroy', ['id' => $camara->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit"><i style="color: red" class="fas fa-trash-alt"></i></button>
                         </form></td>
                 </tr>
             @endforeach

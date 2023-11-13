@@ -210,23 +210,23 @@
                     <h6 class="alert alert-danger">{{ $message }}</h6>
                 @enderror
                 <div class="user-box">
-                    <input type="text" name="nombre" value="{{ $camara->nombre }}" required>
+                    <input type="text" name="nombre" value="{{ $camara->nombre }}" maxlength="10" required>
                     <label>Nombre</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="categoria" value="{{ $camara->categoria }}" required>
+                    <input type="text" name="categoria" value="{{ $camara->categoria }}" maxlength="10" required>
                     <label>Categoria</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="proveedor" value="{{ $camara->proveedor }}" required>
+                    <input type="text" name="proveedor" value="{{ $camara->proveedor }}" maxlength="10" required>
                     <label>Proveedor</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="tipo_de_lente" value="{{ $camara->tipo_de_lente }}" required>
+                    <input type="text" name="tipo_de_lente" value="{{ $camara->tipo_de_lente }}" maxlength="10" required>
                     <label>Tipo de lente</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="resolucion" value="{{ $camara->resolucion }}" required>
+                    <input type="text" name="resolucion" value="{{ $camara->resolucion }}" maxlength="10" required>
                     <label>Resolución</label>
                 </div>
                 <div class="user-box">

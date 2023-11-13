@@ -127,6 +127,12 @@
         #check:checked~.menu {
             right: 0;
         }
+        
+    }
+    button{
+        background-color: transparent;
+        color: white;
+        border: none;
     }
 </style>
 
@@ -137,11 +143,15 @@
                 <li class='logo'><a href='#'><img src='' /></a></li>
                 <input type='checkbox' id='check' />
                 <span class="menu">
-                    <li><a href="/login">Home</a></li>
-                    <li><a href="/user">Registrar</a></li>
                     <li><a href="/view">Consultar</a></li>
                     <li><a href="/insert">Agregar</a></li>
-                    <li><a href="">Salir</a></li>
+                    <li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
+                        </form>
+                    </li>
+                    
                     <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                 </span>
                 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>

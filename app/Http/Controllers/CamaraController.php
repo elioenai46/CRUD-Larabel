@@ -68,11 +68,11 @@ class CamaraController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nombre' => 'required|string',
-            'categoria' => 'required|string',
-            'proveedor' => 'required|string',
-            'tipo_de_lente' => 'required|string',
-            'resolucion' => 'required|string',
+            'nombre' => 'required|string|max:15',
+            'categoria' => 'required|string|max:15',
+            'proveedor' => 'required|string|max:15',
+            'tipo_de_lente' => 'required|string|max:15',
+            'resolucion' => 'required|string|max:15',
             'peso' => 'required|numeric',
             'precio' => 'required|numeric',
         ]);

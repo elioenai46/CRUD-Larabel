@@ -207,23 +207,23 @@
                     <h6 class="alert alert-danger">{{ $message }}</h6>
                 @enderror
                 <div class="user-box">
-                    <input type="text" name="nombre" required="">
+                    <input type="text" name="nombre" maxlength="10" required="">
                     <label>Nombre</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="categoria" required="">
+                    <input type="text" name="categoria" maxlength="10" required="">
                     <label>Categoria</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="proveedor" required="">
+                    <input type="text" name="proveedor" maxlength="10" required="">
                     <label>Proveedor</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="tipo_de_lente" required="">
+                    <input type="text" name="tipo_de_lente" maxlength="10" required="">
                     <label>Tipo de lente</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="resolucion" required="">
+                    <input type="text" name="resolucion" maxlength="10" required="">
                     <label>Resolución</label>
                 </div>
                 <div class="user-box">
