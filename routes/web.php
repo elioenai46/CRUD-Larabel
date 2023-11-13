@@ -21,6 +21,13 @@ Route::get('/', function () {
 Route::get('/insert', function(){
     return view('actividades.index');
 });
+
+Route::get('/user', function(){
+    return view('usuario.index');
+});
+Route::get('/login', function(){
+    return view('usuario.home');
+});
 //Insertar
 Route::post('/insert',[CamaraController::class,'store'])->name('actividades');
 //Consultar
@@ -32,4 +39,6 @@ Route::get('/edit/{id}', [CamaraController::class, 'show'])->name('camaras-edit'
 Route::patch('/edit/{id}', [CamaraController::class, 'update'])->name('camaras-update');
 
 
+//Usuarios
+Route::post('/user',[CamaraController::class,'store'])->name('usuario');
 

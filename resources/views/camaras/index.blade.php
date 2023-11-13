@@ -19,8 +19,7 @@
             font-weight: 300;
             line-height: 1.42em;
             color: #A7A1AE;
-            background-color: #1F2739;
-        }
+            background: #141e30;      }
 
         h1 {
             font-size: 3em;

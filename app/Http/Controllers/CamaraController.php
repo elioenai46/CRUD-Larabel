@@ -48,9 +48,15 @@ class CamaraController extends Controller
 
     public function destroy($id)
     {
-        $camara = camara::find($id);
-        $camara->delete();
-        return redirect()->route('camaras')->with('success', 'Camara eliminada');
+        $camara = Camara::find($id);
+
+        // Verificar si la cámara existe antes de intentar eliminarla
+        if ($camara) {
+            $camara->delete();
+            return redirect()->route('camaras.index')->with('success', 'Camara eliminada');
+        } else {
+            return redirect()->route('camaras.index')->with('error', 'Camara no encontrada');
+        }
     }
 
     public function show($id)

@@ -137,10 +137,10 @@
                 <li class='logo'><a href='#'><img src='' /></a></li>
                 <input type='checkbox' id='check' />
                 <span class="menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Consultar</a></li>
-                    <li><a href="">Agregar</a></li>
+                    <li><a href="/login">Home</a></li>
+                    <li><a href="/user">Registrar</a></li>
+                    <li><a href="/view">Consultar</a></li>
+                    <li><a href="/insert">Agregar</a></li>
                     <li><a href="">Salir</a></li>
                     <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                 </span>
