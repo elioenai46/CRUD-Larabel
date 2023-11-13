@@ -46,9 +46,42 @@ class CamaraController extends Controller
         return view('camaras.index', ['camaras' => $camaras]);
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         $camara = camara::find($id);
         $camara->delete();
-        return redirect()->route('camaras')->with('success','Camara eliminada');
+        return redirect()->route('camaras')->with('success', 'Camara eliminada');
+    }
+
+    public function show($id)
+    {
+        $camara = Camara::find($id);
+        return view('camaras.show   ', compact('camara'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nombre' => 'required|string',
+            'categoria' => 'required|string',
+            'proveedor' => 'required|string',
+            'tipo_de_lente' => 'required|string',
+            'resolucion' => 'required|string',
+            'peso' => 'required|numeric',
+            'precio' => 'required|numeric',
+        ]);
+
+        $camara = Camara::find($id);
+        $camara->nombre = $request->nombre;
+        $camara->categoria = $request->categoria;
+        $camara->proveedor = $request->proveedor;
+        $camara->tipo_de_lente = $request->tipo_de_lente;
+        $camara->resolucion = $request->resolucion;
+        $camara->peso = $request->peso;
+        $camara->precio = $request->precio;
+
+        $camara->save();
+
+        return redirect()->route('camaras.index')->with('success', 'Camara actualizada');
     }
 }

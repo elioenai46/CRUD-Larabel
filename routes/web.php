@@ -24,6 +24,12 @@ Route::get('/insert', function(){
 //Insertar
 Route::post('/insert',[CamaraController::class,'store'])->name('actividades');
 //Consultar
-Route::get('/view',[CamaraController::class,'index'])->name('camaras');
+Route::get('/view',[CamaraController::class,'index'])->name('camaras.index');
 //Eliminar
 Route::delete('/view/{id}', [CamaraController::class, 'destroy'])->name('camaras-destroy');
+//Actualizar
+Route::get('/edit/{id}', [CamaraController::class, 'show'])->name('camaras-edit');
+Route::patch('/edit/{id}', [CamaraController::class, 'update'])->name('camaras-update');
+
+
+

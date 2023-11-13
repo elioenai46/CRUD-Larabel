@@ -172,7 +172,10 @@
                     <td>{{ $camara->resolucion }}</td>
                     <td>{{ $camara->peso }}</td>
                     <td>{{ $camara->precio }}</td>
-                    <td><button><i class="fas fa-pen-square"></i></button></td>
+                    <td>
+                        <!-- Botón para actualizar -->
+                        <a href="{{ route('camaras-update', ['id' => $camara->id]) }}"><button><i class="fas fa-pen-square"></i></button></a>
+                    </td>
                     <td> <!-- Formulario para eliminar -->
                         <form action="{{ route('camaras-destroy', ['id' => $camara->id]) }}" method="POST">
                             @csrf
