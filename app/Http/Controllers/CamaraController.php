@@ -36,6 +36,6 @@ class CamaraController extends Controller
         $camara->save();
 
         // Redirigir con un mensaje de éxito
-        return redirect()->route('actividades')->with('success', 'Camara creada correctamente');
+        return redirect()->route('actividades')->with('success', 'camara Registrada');
     }
 }

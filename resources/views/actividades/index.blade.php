@@ -189,59 +189,61 @@
 </style>
 </head>
 
-<body>
-    @extends('insert')
-    @section('content')
-        
-    
-    <div class="login-box">
-        <h2>Agregar Camara</h2>
-        <form action="{{route('actividades')}}" method="POST">
-            @csrf
-            @if (session('succes'))
-                <h6 class="alert alert-success">{{session('success')}}</h6>
-            @endif
-            @error('nombre')
-                <h6 class="alert alert-danger">{{ $message }}</h6>
-            @enderror
-            <div class="user-box">
-                <input type="text" name="nombre" required="">
-                <label>Nombre</label>
-            </div>
-            <div class="user-box">
-                <input type="text" name="categoria" required="">
-                <label>Categoria</label>
-            </div>
-            <div class="user-box">
-                <input type="text" name="proveedor" required="">
-                <label>Proveedor</label>
-            </div>
-            <div class="user-box">
-                <input type="text" name="tipo_de_lente" required="">
-                <label>Tipo de lente</label>
-            </div>
-            <div class="user-box">
-                <input type="text" name="resolucion" required="">
-                <label>Resolución</label>
-            </div>
-            <div class="user-box">
-                <input type="number" name="peso" required="">
-                <label>Peso</label>
-            </div>
-            <div class="user-box">
-                <input type="number" name="precio" required="">
-                <label>Precio</label>
-            </div>
-            <div class="center-custom">
-
-                <button type="submit">Agregar</button>
-
-            </div>
+    <body>
+        @extends('insert')
+        @section('content')
             
-        </form>
-    </div>
-    @endsection
-</body>
+        
+        <div class="login-box">
+            <h2>Agregar Camara</h2>
+            <form action="{{route('actividades')}}" method="POST">
+                @csrf
+                @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+                @endif
+                @error('nombre')
+                    <h6 class="alert alert-danger">{{ $message }}</h6>
+                @enderror
+                <div class="user-box">
+                    <input type="text" name="nombre" required="">
+                    <label>Nombre</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="categoria" required="">
+                    <label>Categoria</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="proveedor" required="">
+                    <label>Proveedor</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="tipo_de_lente" required="">
+                    <label>Tipo de lente</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="resolucion" required="">
+                    <label>Resolución</label>
+                </div>
+                <div class="user-box">
+                    <input type="number" name="peso" required="">
+                    <label>Peso</label>
+                </div>
+                <div class="user-box">
+                    <input type="number" name="precio" required="">
+                    <label>Precio</label>
+                </div>
+                <div class="center-custom">
+
+                    <button type="submit">Agregar</button>
+
+                </div>
+                
+            </form>
+        </div>
+        @endsection
+    </body>
 
 </html>
 
